@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Flag or Green Flag?</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="character"></div>
+      <div class="floating-hearts"></div>
+      <div class="floating-flags"></div>
+      
+      <div class="quiz-container">
+        <div id="welcome" class="screen active">
+          <h1>Red Flag or Green Flag?</h1>
+          <p>Let's see if you can find out the flag in a person🚩💚</p>
+          <button id="startBtn" class="btn">Start Quiz</button>
+        </div>
+
+        <div id="loading" class="screen">
+          <div class="loading-spinner"></div>
+          <p>Loading questions...</p>
+        </div>
+
+        <div id="question" class="screen">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+          <div id="questionText" class="question-text"></div>
+          <div class="options">
+            <button class="btn option" data-value="red">Red Flag 🚩</button>
+            <button class="btn option" data-value="green">Green Flag 💚</button>
+          </div>
+        </div>
+
+        <div id="result" class="screen">
+          <div id="resultMessage"></div>
+          <div class="result-emoji"></div>
+          <button id="nextBtn" class="btn">Next Question</button>
+        </div>
+
+        <div id="end" class="screen">
+          <h2 class="end-title">Quiz Complete!</h2>
+          <div class="score-container">
+            <div class="score-circle">
+              <span id="finalScore">0</span>
+              <span class="score-label">Score</span>
+            </div>
+          </div>
+          <div id="endMessage" class="end-message"></div>
+          <button id="restartBtn" class="btn">Play Again</button>
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
