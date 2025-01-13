@@ -62,8 +62,8 @@ async function getQuestions() {
   }
   
   let lastQuestion = response.split(MAX_QUESTIONS+".")[1];
-  const lastFlag = lastQuestion.slice(-1);
-  lastQuestion = lastQuestion.slice(0, -1).trim();
+  const lastFlag = lastQuestion.includes('0')?0:1;
+  lastQuestion = lastQuestion.replaceAll(flag.toString(),"");
   lastQuestion = lastQuestion.replaceAll(MAX_QUESTIONS+".", "");
   questionArray.push({
     text: lastQuestion,
