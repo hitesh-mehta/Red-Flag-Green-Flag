@@ -12,6 +12,7 @@
 }
 
 body {
+  margin-top:10%;
   overflow: scroll;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--background);

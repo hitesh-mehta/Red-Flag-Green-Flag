@@ -10,7 +10,7 @@ let questions = [];
 let score = 0;
 const MAX_QUESTIONS = 10;
 
-const prompt = "Create 10 funny and cute relationship scenario questions of length about 4-5 lines with each scenario either showing a red flag or green flag. The user shall be able to read the scenario and think if that's a read flag or green flag. Don't give any extra information, just append 0 to the scenario if it's a red flag and 1 if it's a green flag.";
+const prompt = "Create 10 funny and cute relationship scenario questions of length about 2-3 lines with each scenario either showing a red flag or green flag. The user shall be able to read the scenario and think if that's a read flag or green flag. Don't give any extra information, just append 0 to the scenario if it's a red flag and 1 if it's a green flag.";
 
 // Wait for Puter script to load
 script.onload = () => {
@@ -63,7 +63,7 @@ async function getQuestions() {
   
   let lastQuestion = response.split(MAX_QUESTIONS+".")[1];
   const lastFlag = lastQuestion.includes('0')?0:1;
-  lastQuestion = lastQuestion.replaceAll(flag.toString(),"");
+  lastQuestion = lastQuestion.replaceAll(lastFlag.toString(),"");
   lastQuestion = lastQuestion.replaceAll(MAX_QUESTIONS+".", "");
   questionArray.push({
     text: lastQuestion,
