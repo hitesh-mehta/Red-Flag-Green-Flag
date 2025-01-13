@@ -52,8 +52,8 @@ async function getQuestions() {
   
   for(let i = 1; i < MAX_QUESTIONS; i++) {
     let question = response.split(i.toString()+".")[1].split((i+1).toString()+".")[0];
-    const flag = question.slice(-1);
-    question = question.slice(0, -1).trim();
+    const flag = question.includes('0')?0:1;
+    question = question.replaceAll(flag.toString(),"");
     question = question.replaceAll(i+".", "");
     questionArray.push({
       text: question,
