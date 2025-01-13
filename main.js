@@ -44,7 +44,7 @@ function createFloatingElements() {
 }
 
 async function getQuestions() {
-  const resp = await puter.ai.chat(prompt, { model: 'claude' });
+  const resp = await puter.ai.chat(prompt);
   let response = String(resp);
   
   response = response.replaceAll("*", "").replaceAll("#", "").replaceAll("\n", "");
