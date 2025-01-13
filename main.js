@@ -57,7 +57,7 @@ async function getQuestions() {
     question = question.replaceAll(i+".", "");
     questionArray.push({
       text: question,
-      isGreenFlag: flag === '1'
+      isGreenFlag: flag === 1
     });
   }
   
@@ -67,7 +67,7 @@ async function getQuestions() {
   lastQuestion = lastQuestion.replaceAll(MAX_QUESTIONS+".", "");
   questionArray.push({
     text: lastQuestion,
-    isGreenFlag: lastFlag === '1'
+    isGreenFlag: lastFlag === 1
   });
 
   return questionArray;
